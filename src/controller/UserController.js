@@ -10,6 +10,6 @@ router.post("/createFakeDriver", UserHelper.createFakeDriver);
 // Reading
 router.get("/getPassangers", UserHelper.getPassangers);
 router.get("/getDrivers", UserHelper.getDrivers);
-router.get("/getUser/{id}", UserHelper.getUser);
+router.get("/getUser/:id", UserHelper.getUser);
 
 module.exports=router;

@@ -21,7 +21,7 @@ async function createFakeUser(isDriver){
                             fullname: faker.name.firstName()+" "+faker.name.lastName(),
                             email: faker.internet.email(),
                             password: "$2b$10$N6bMluWnTHkSfdzpPBelmOiqAKhDKjsFtXAZDw6rri5xei4VWPkIG", //tars123
-                            age: faker.random.number,
+                            age: faker.random.number(),
                             gender: 'Male',
                             phone: faker.phone.phoneNumber(),
                             image: faker.image.imageUrl(),
