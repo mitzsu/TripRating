@@ -5,8 +5,10 @@ clone repository > npm install
 
 ## In Mongo Shell
 mongo
-> use trip_rating
+> use trip_rating;
+
 > db.createCollection("user");
+
 > db.createCollection("trip");
 
 
