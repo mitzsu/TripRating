@@ -48,21 +48,23 @@ async function readDocument(CurrentModel, findObject){
 }
 
 // Update the Document
-function setOneDocument(CurrentModel, condition, setObject, callback){
-    Model.getModel(CurrentModel)
-    .updateOne(
-        condition,
-        setObject
-    ).then((data)=>{
-            callback({
-                received: 1,
-                result: data
+function setOneDocument(CurrentModel, condition, setObject){
+    return new Promise((resolve, reject) => {
+        Model.getModel(CurrentModel)
+        .updateOne(
+            condition,
+            setObject
+        ).then((data)=>{
+                return resolve({
+                    code: "success",
+                    result: data
+                });
+        }).catch((err)=>{
+            console.log("Error in update single document: "+err);
+            return reject({
+                code: "error",
+                result: []
             });
-    }).catch((err)=>{
-        console.log("Error in update single document: "+err);
-        callback({
-            received: 0,
-            result: []
         });
     });
 }

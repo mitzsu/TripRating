@@ -40,3 +40,15 @@ exports.getTrip = async function(req,res){
     var result = await Trip.getTrip(req.params.id);
     return STATUS_CODE.SC_200(res, result);
 }
+
+
+exports.getTripsByUser = async function(req,res){
+    var result = await Trip.getTripsByUser(req.params.id, req.params.is_driver);
+    return STATUS_CODE.SC_200(res, result);
+}
+
+
+exports.ratingByUser = async function(req,res){
+    var result = await Trip.rateThisTrip(req.body);
+    return STATUS_CODE.SC_200(res, result);
+}
