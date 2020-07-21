@@ -7,10 +7,6 @@ clone repository > npm install
 mongo
 > use trip_rating;
 
-> db.createCollection("user");
-
-> db.createCollection("trip");
-
 
 ## Run Project
 nodemon app.js
